@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="verbatim.js"></script>
+    <style>
+        html,body{
+            height:100%;
+        }
+        body{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            background-image: url("http://racaljk.github.io/verbatimAnim/public/bg.jpg");
+        }
+        #title{
+            position: absolute;
+            top:8vh;
+            left:0;
+            text-align: center;
+            color: #ffffff;
+            width:100%;
+            font-size: 8vw;
+            font-family: 'Pacifico', cursive;
+        }
+        #edit{
+            color: #ffffff;
+        }
+        #edit h1{
+            font-weight: 900;
+            font-size: 20px;
+        }
+        #edit p{
+            font-size: 12px;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+<div id="title">
+</div>
+<div id="edit">
+</div>
+<script>
+    var html1 = 'Shu Wang',
+        html2 = "<h1>我是疏旺！</h1><p>我是一名前端工程师！</p><p>你想更多的了解我吗？</p><p>那带你去我的个人网站看一看吧！</p><p>Let's go!</p>";
+    new Verbatim({
+        verbatimContainer:'#title',
+        html:html1,
+        repeatTimes:1,
+        interval:500,
+        fn:function(){
+            new Verbatim({
+                verbatimContainer:'#edit',
+                html:html2
+            })
+        }
+    })
+</script>
+</body>
+</html>
