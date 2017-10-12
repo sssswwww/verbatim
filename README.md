@@ -1,3 +1,3 @@
 # verbatim
 
-a demo(http://shuwang.me/projects/verbatim/index.html)
+a [demo](http://shuwang.me/projects/verbatim/index.html)
