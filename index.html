@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>verbatim</title>
     <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css" rel="stylesheet">
+    <link rel="stylesheet" href="font.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script src="verbatim.js"></script>
     <style>
@@ -17,20 +18,22 @@
             display: flex;
             justify-content:center;
             align-items:center;
-            background-image: url("http://racaljk.github.io/verbatimAnim/public/bg.jpg");
+            background-color: slategray;
+            background-image: linear-gradient(90deg, transparent 100%, white 100%), repeating-linear-gradient(60deg, rgba(255,255,255,.15), rgba(255,255,255,.15) 40px, transparent 40px, transparent 80px);
         }
         #title{
             position: absolute;
             top:8vh;
             left:0;
             text-align: center;
-            color: #ffffff;
             width:100%;
             font-size: 8vw;
             font-family: 'Pacifico', cursive;
+            color: firebrick;
+            text-shadow: 0.05em 0.05em slategrey;
         }
         #edit{
-            color: #ffffff;
+            color: #3b0205;
         }
         #edit h1{
             font-weight: 900;
@@ -39,6 +42,9 @@
         #edit p{
             font-size: 12px;
             margin-top:10px;
+        }
+        #edit a{
+            color: #ffc0cb;
         }
     </style>
 </head>
@@ -49,7 +55,7 @@
 </div>
 <script>
     var html1 = 'Shu Wang',
-        html2 = "<h1>我是疏旺！</h1><p>我是一名前端工程师！</p><p>你想更多的了解我吗？</p><p>那带你去我的个人网站看一看吧！</p><p>Let's go!</p>";
+        html2 = "<h1>我是疏旺！</h1><p>一名前端工程师！</p><p>你想更多的了解我吗？</p><p>那带你去我的个人网站看一看吧！</p><p style='margin-bottom: 10px'>Let's go!</p><a href='http://shuwang.me'>click me!</a>";
     new Verbatim({
         verbatimContainer:'#title',
         html:html1,

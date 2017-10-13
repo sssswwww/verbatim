@@ -59,7 +59,7 @@
                     if(index < html.length){
                         str += (index&1?'_':'');
                     }
-                    console.log(str)
+                    // console.log(str)
                     verbatimContainer.html(str);
                 }
             },interval)
