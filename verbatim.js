@@ -16,16 +16,17 @@
         this.verbatim();
     }
     Verbatim.prototype = {
+        defaultOption:{
+            verbatimContainer:null,
+            repeatTimes:1,
+            alreadyRepeatTimes:0,
+            fn:null,
+            html:'',
+            interval:80,
+            mp3Url:'http://data.huiyi8.com/2014/xll/03/31/1466.mp3'
+        },
         init:function(option){
-            this.option = $.extend(true,{
-                verbatimContainer:null,
-                repeatTimes:1,
-                alreadyRepeatTimes:0,
-                fn:null,
-                html:'',
-                interval:80,
-                mp3Url:'http://data.huiyi8.com/2014/xll/03/31/1466.mp3'
-            },option||{})
+            this.option = $.extend({},this.defaultOption,option||{});
         },
         verbatim:function(){
             var verbatimContainer = $(this.option.verbatimContainer),

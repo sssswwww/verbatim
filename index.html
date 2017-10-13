@@ -15,9 +15,9 @@
             height:100%;
         }
         body{
-            display: flex;
-            justify-content:center;
-            align-items:center;
+            /*display: flex;*/
+            /*justify-content:center;*/
+            /*align-items:center;*/
             background-color: slategray;
             background-image: linear-gradient(90deg, transparent 100%, white 100%), repeating-linear-gradient(60deg, rgba(255,255,255,.15), rgba(255,255,255,.15) 40px, transparent 40px, transparent 80px);
         }
@@ -34,6 +34,10 @@
         }
         #edit{
             color: #3b0205;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
         }
         #edit h1{
             font-weight: 900;
@@ -59,7 +63,7 @@
     new Verbatim({
         verbatimContainer:'#title',
         html:html1,
-        repeatTimes:1,
+        repeatTimes:3,
         interval:200,
         fn:function(){
             new Verbatim({
